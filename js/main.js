@@ -27,12 +27,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Work with video
 
-  const videos = document.querySelectorAll('#video')
+  const videos = document.querySelectorAll('video')
 
 
   videos.forEach((video) => {
 
-    const playBtn = video.nextSibling
+    const playBtn = video.nextSibling.nextSibling
+    // console.log(playBtn)
 
     playBtn.addEventListener('click', () => {
       video.play()
@@ -43,9 +44,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     video.addEventListener('ended', function () {
       this.src = this.src
-      playButton.style.display = 'block'
+      playBtn.style.display = 'block'
       video.removeAttribute('controls')
     })
+
   })
 
 
@@ -82,4 +84,12 @@ window.addEventListener("DOMContentLoaded", () => {
   buttonSend.addEventListener('click', popupOpen)
   buttonClosePopup.addEventListener('click', popupClose)
 
+
+  // work with form
+
+  const formContact = document.querySelector('.contact__form')
+
+  formContact.addEventListener('submit', (event) => {
+    event.preventDefault()
+  })
 })
