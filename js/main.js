@@ -15,8 +15,9 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
   // Work with photo carousel
-  $(".carousel").slick({
+  $(".gallery__carousel").slick({
     autoPlay: true,
     autoPlaySpeed: 5000,
     prevArrow:
@@ -25,8 +26,8 @@ window.addEventListener("DOMContentLoaded", () => {
       '<div class="carousel__arrow carousel__next"><i class="fas fa-chevron-right"></i></div>'
   })
 
-  // Work with video
 
+  // Work with video
   const videos = document.querySelectorAll('video')
 
 
@@ -67,6 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+
   // Work with popup window
   function popupOpen() {
     document.querySelector('.popup').classList.add('popup__active')
@@ -85,8 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
   buttonClosePopup.addEventListener('click', popupClose)
 
 
-  // work with form
-
+  // Work with form
   const formContact = document.querySelector('.contact__form')
 
   formContact.addEventListener('submit', (event) => {
