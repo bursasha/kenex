@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
   // Work with form
-  const formContact = document.querySelector('.contact__form')
+  const formContact = document.querySelector('.contacts__form')
 
   formContact.addEventListener('submit', (event) => {
     event.preventDefault()
